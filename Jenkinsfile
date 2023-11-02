@@ -8,6 +8,7 @@ pipeline {
                 sh 'npm cache clean --force'
                 sh 'npm rm -rf node_modules && rm package-lock.json'
                 sh 'npm install'
+                echo 'building....'
             }
         }
         stage('Test') {
