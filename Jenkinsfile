@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'node currency_breakdown.js'
+                sh 'node test-code.js'
             }
         }
     }
