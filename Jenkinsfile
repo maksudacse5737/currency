@@ -3,17 +3,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Cloning code') {
             steps {
-                sh 'npm cache clean --force'
-                sh 'npm rm -rf node_modules && rm package-lock.json'
-                sh 'npm install'
-                echo 'building..'
+                echo 'cloning..'
+                git url:"https://github.com/maksudacse5737/currency.git", branch: "main"
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
+                echo 'building..'
+               // sh "npm build -t test-code.js"
             }
         }
         stage('Deploy') {
