@@ -4,7 +4,7 @@ const readline=require('readline').createInterface({
     output: process.stdout,
 });
 
-readline.question('Please enter a number: ', input=>{
+readline.question('Please enter a num: ', input=>{
 breakdown(input);
 readline.close();
 });
